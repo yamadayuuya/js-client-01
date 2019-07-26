@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button onclick="setFontStyle('normal normal normal 30px/300% 'ＭＳ Ｐゴシック',sans-serif');">normal normal normal 30px/300% 'ＭＳ Ｐゴシック',sans-serif</button>
+        <br />
+        <button onclick="setFontStyle('italic small-caps bold 300%/200% Impact,sans-serif');">italic small-caps bold 300%/200% Impact,sans-serif</button>
+        <br />
+        <button onclick="setFontStyle('caption');">caption</button>
+        <button onclick="setFontStyle('icon');">icon</button>
+        <button onclick="setFontStyle('menu');">menu</button>
+        <button onclick="setFontStyle('message-box');">message-box</button>
+        <button onclick="setFontStyle('small-caption');">small-caption</button>
+        <button onclick="setFontStyle('status-bar');">status-bar</button>
+        <br />
+        <button onclick="setFontStyle('inherit');">inherit</button>
+        <br />
+        <p>サンプルのfontプロパティの値：<span id="sampleOutput"></span></p>
+        <div id="sample" style="padding: 10px; border: 1px solid red; background-color: yellow;">
+        Sample Element / サンプル要素
+        </div>
+        <script type="text/javascript">
+            function setFontStyle( $font ) {
+             var $element = document.getElementById( "sample" );
+             $element.style.font = $font;
+             var $font = $element.style.font;
+             document.getElementById( "sampleOutput" ).innerHTML = $font;
+            }
+            </script>
+    </body>
+</html>
